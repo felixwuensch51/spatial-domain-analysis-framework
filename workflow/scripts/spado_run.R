@@ -54,7 +54,7 @@ ct_distribution <- SpatialCellTypeDistribution(sample_information_coordinate=coo
                                                sample_information_cellType=initial_result$sample_information)
 if (dim(coords)[1] < 30000){
   DD <- DistributionDistance(ct_distribution,
-                             distance="jensen-shannon")
+                             distance="JSD")
 } else {
   DD <- DistributionDistance(ct_distribution,
                              distance="manhattan")
